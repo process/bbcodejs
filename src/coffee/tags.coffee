@@ -230,6 +230,10 @@ class LinkTag extends @bbcode.Tag
     else
       @getContent()
 
+class OverlineTag extends @bbcode.Tag
+  _toHTML: ->
+    "<span style=\"text-decoration: overline;\">#{@getContent(true)}</span>"
+
 @bbcode.createSimpleTag = (name, attributes) =>
   class SimpleTag extends @bbcode.Tag
     constructor: ->
@@ -278,3 +282,5 @@ class LinkTag extends @bbcode.Tag
   quote: QuoteTag
   url: LinkTag
   link: LinkTag
+  o: OverlineTag
+  
