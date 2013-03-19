@@ -232,7 +232,11 @@ class LinkTag extends @bbcode.Tag
 
 class OverlineTag extends @bbcode.Tag
   _toHTML: ->
-    "<span style=\"text-decoration: overline;\">#{@getContent(true)}</span>"
+    "<span style=\"text-decoration: overline;\">#{@getContent()}</span>"
+
+class SpoilerTag extends @bbcode.Tag
+  _toHTML: ->
+    "<span onmouseout=\"this.style.color='black'\" onmouseover=\"this.style.color='white';\" style=\"color: black; background-color: black;\">#{@getContent()}</span>"
 
 @bbcode.createSimpleTag = (name, attributes) =>
   class SimpleTag extends @bbcode.Tag
@@ -283,4 +287,4 @@ class OverlineTag extends @bbcode.Tag
   url: LinkTag
   link: LinkTag
   o: OverlineTag
-  
+  spoiler: SpoilerTag
