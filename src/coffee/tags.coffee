@@ -264,6 +264,8 @@ class LinkTag extends @bbcode.Tag
   tr: @bbcode.createSimpleTag('tr', {DISCARD_TEXT: true})
   th: @bbcode.createSimpleTag('th')
   td: @bbcode.createSimpleTag('td')
+  sup: @bbcode.createSimpleTag('sup')
+  sub: @bbcode.createSimpleTag('sub')
   code: CodeTag
   img: ImageTag
   hr: HorizontalRuleTag
