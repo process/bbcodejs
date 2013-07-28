@@ -6,6 +6,8 @@ bbcode.js is a JavaScript BBCode parser and renderer written in CoffeeScript.
 
 Ported from https://github.com/vishnevskiy/bbcodepy!
 
+(This fork simply adds builtin support for some new tags: spoiler, o, sup, sub)
+
 Usage
 -----
 
